@@ -1,14 +1,12 @@
-import React from 'react';
+import React from 'react'
+import Counter from './components/Counter'
 
-
-function App() {
+const App = () => {
   return (
-    
-        <div>
-          <h1>Hola Mundo</h1>
-        </div>
-    
-  );
+    <section id='main'>
+      <Counter />
+    </section>
+  )
 }
 
-export default App;
+export default App
