@@ -1,4 +1,4 @@
-import {getDataCallback, getDataPromise, getDataPromiseError} from './async'
+import {getDataCallback, getDataPromise, getDataPromiseError, getUsers} from './async'
 //done: para test asyncronos
 
 describe('test a operaciones asyncronas',()=>{
@@ -58,5 +58,10 @@ describe('test a operaciones asyncronas',()=>{
         }
         
     });
+
+    test('probando promesa con solicitud http', async ()=>{
+      const user = await getUsers()
+      expect(user).toHaveProperty('username')
+    })
 
 })

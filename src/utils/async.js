@@ -31,3 +31,11 @@ getDataPromise()
       }, 2000);
     });
   }; 
+
+  //https://jsonplaceholder.typicode.com/users/1
+
+  export const getUsers = async ()=>{
+    const res = fetch('https://jsonplaceholder.typicode.com/users')
+    const user = await res.json()
+    return user
+  }
